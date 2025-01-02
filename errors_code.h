@@ -1,0 +1,9 @@
+#ifndef ERRORS_CODE_H
+#define ERRORS_CODE_H
+
+#define MISSING_PARAM_ERROR 10
+#define ERROR_OPEN_FILE 50
+#define ERROR_ALLOCATE_MEMORY 40
+#define INVALID_FORMAT_FILE 30
+
+#endif

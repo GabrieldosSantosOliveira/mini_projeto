@@ -1,11 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
 #include "poly.h"
-
-#define MISSING_PARAM_ERROR 10
-#define ERROR_OPEN_FILE 50
+#include "errors_code.h"
 
 int main(int argc, char **argv)
 {
@@ -16,9 +11,9 @@ int main(int argc, char **argv)
   }
   FILE *p1file = fopen(argv[1], "r");
   FILE *p2file = fopen(argv[2], "r");
-  FILE *destino = fopen(argv[3], "w");
+  FILE *outputFile = fopen(argv[3], "w");
 
-  if (p1file == NULL || p2file == NULL || destino == NULL)
+  if (p1file == NULL || p2file == NULL || outputFile == NULL)
   {
     printf("Erro ao criar o arquivo\n");
     return ERROR_OPEN_FILE;
@@ -31,8 +26,8 @@ int main(int argc, char **argv)
   read_from_a_file(p2, p2file);
   sum(p1, p2, dest);
 
-  write_in_a_file(dest, destino);
-  fclose(destino);
+  write_in_a_file(dest, outputFile);
+  fclose(outputFile);
   fclose(p1file);
   fclose(p2file);
   delete_poly(p1);

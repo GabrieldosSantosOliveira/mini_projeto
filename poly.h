@@ -1,3 +1,6 @@
+#ifndef POLY_H
+#define POLY_H
+
 #include <stdio.h>
 #define ID_SIZE 4
 typedef struct poly
@@ -17,3 +20,5 @@ void sub(const Poly *const p1, const Poly *const p2, Poly *const dest);
 
 void write_in_a_file(struct poly *, FILE *);
 void read_from_a_file(struct poly *, FILE *);
+
+#endif

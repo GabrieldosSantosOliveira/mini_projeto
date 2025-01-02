@@ -1,11 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
 #include "poly.h"
-
-#define MISSING_PARAM_ERROR 10
-#define ERROR_OPEN_FILE 50
+#include "errors_code.h"
 
 int main(int argc, char **argv)
 {
